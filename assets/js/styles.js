@@ -40,3 +40,16 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x')
     navbar.classList.remove('active')
 }
+
+/**
+ * Actions Scroll Reveal
+ */
+/*
+window.sr = ScrollReveal({ 
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+})
+
+sr.reveal('.home-content, .heading', { origin: 'top' })*/

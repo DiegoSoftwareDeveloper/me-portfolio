@@ -100,33 +100,42 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="" alt="img-profile-three"/>
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, provident.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
+      <h2 class="heading">Latest <span>Project</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="" alt="img-profile-three" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+              provident.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name"/>
-                <input type="email" placeholder="Email Address"/>
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number"/>
-                <input type="email" placeholder="Email Subject"/>
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn" />
-        </form>
+      <h2 class="heading">Contact <span>Me!</span></h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email Address" />
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number" />
+          <input type="email" placeholder="Email Subject" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
     </section>
 
     <footer class="footer">
@@ -139,6 +148,20 @@
     </footer>
 
     <script src="../assets/js/styles.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../assets/js/frameworks/boxicons.js"></script>
+    <script src="../assets/js/frameworks/scrollreveal.min.js"></script>
+
+    <script>
+      // Changing the defaults
+      window.sr = ScrollReveal({
+        reset: true,
+        distance: "80px",
+        duration: 2000,
+        delay: 200,
+      });
+
+      // Customizing a reveal set
+      sr.reveal('.home-content, .heading', { origin: 'top' });
+    </script>
   </body>
 </html>
