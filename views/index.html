@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/portfolio.ico" />
     <title>Portfolio Diego</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/theme.css" />
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="../views/index.html" class="logo">
+        <img src="../assets/img/portfolioImg.png" alt="LogoPortfolio" />
+      </a>
       <i class="bx bx-menu" id="menu-icon"></i>
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -21,35 +25,64 @@
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" title="Toggles light &amp; dark" aria-label="light" aria-live="polite">
+          <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+              <circle cx="24" cy="10" r="6" fill="black"></circle>
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"></circle>
+            <g class="sun-beams" stroke="currentColor">
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+             </g>
+          </svg>
+        </button>
       </nav>
     </header>
 
     <section class="home" id="home">
       <div class="home-content">
-        <h3>Hello, It's Me</h3>
+        <h3>Hello, I'm Me</h3>
         <h1>Diego Lopez</h1>
-        <h3>And I'm a <span>.Net Developer</span></h3>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
           accusamus tenetur odit ex illo aspernatur nemo debitis!
         </p>
         <div class="social-media">
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
-          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="https://www.facebook.com/diegobarretoolopez" target="_blank"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/alejandro_671/" target="_blank"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/diego-alejandro-barreto-l%C3%B3pez-4430b6185/"
+            target="_blank"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://github.com/DiegoSoftwareDeveloper" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
         </div>
         <a href="#" class="btn">Download CV</a>
       </div>
 
       <div class="home-img">
-        <img src="" alt="img-profile" />
+        <img src="../assets/img/DiegoProfile.png" alt="img-profile" />
       </div>
     </section>
 
     <section class="about" id="about">
       <div class="about-img">
-        <img src="" alt="img-profile-secondary" />
+        <img src="../assets/img/DiegoProfile.png" alt="img-profile" />
       </div>
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
@@ -103,7 +136,29 @@
       <h2 class="heading">Latest <span>Project</span></h2>
       <div class="portfolio-container">
         <div class="portfolio-box">
-          <img src="" alt="img-profile-three" />
+          <img src="../assets/img/projects/miGranFruver.jpeg" alt="LogoPortfolio" />
+          <div class="portfolio-layer">
+            <h4>Mi Gran Fruver</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+              provident.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="../assets/img/projects/miGranFruver.jpeg" alt="LogoPortfolio" />
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+              provident.
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="../assets/img/projects/miGranFruver.jpeg" alt="LogoPortfolio" />
           <div class="portfolio-layer">
             <h4>Web Design</h4>
             <p>
@@ -147,21 +202,10 @@
       </div>
     </footer>
 
-    <script src="../assets/js/styles.js"></script>
     <script src="../assets/js/frameworks/boxicons.js"></script>
     <script src="../assets/js/frameworks/scrollreveal.min.js"></script>
-
-    <script>
-      // Changing the defaults
-      window.sr = ScrollReveal({
-        reset: true,
-        distance: "80px",
-        duration: 2000,
-        delay: 200,
-      });
-
-      // Customizing a reveal set
-      sr.reveal('.home-content, .heading', { origin: 'top' });
-    </script>
+    <script src="../assets/js/frameworks/typed.umd.js"></script>
+    <script src="../assets/js/frameworks/theme-toggle.js"></script>
+    <script src="../assets/js/styles.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --button-bg-color: #323946;
 }
 
 * {
@@ -24,6 +25,7 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  transition: .5s;
 }
 
 section {
@@ -36,7 +38,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
+  padding: 1rem 9%;
   background: var(--bg-color);
   display: flex;
   justify-content: space-between;
@@ -55,11 +57,32 @@ section {
   cursor: default;
 }
 
+.logo img {
+  max-height: 70px;
+  cursor: pointer;
+}
+
 .navbar a {
   font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
   transition: 0.3s;
+}
+
+#switch {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+}
+
+.bxs-moon {
+  color: var(--text-color);
+}
+
+.bxs-sun {
+  color: var(--sun-color);
 }
 
 .navbar a:hover,
@@ -81,6 +104,19 @@ section {
 
 .home-img img {
   width: 35vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .home-content h3 {
@@ -134,7 +170,7 @@ span {
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--main-color);
   font-size: 1.6rem;
-  color: var(--second-bg-color);
+  color: var(--button-bg-color);
   letter-spacing: 0.1rem;
   font-weight: 600;
   transition: 0.5s ease;
@@ -237,10 +273,12 @@ span {
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 
 .portfolio-box img {
   width: 100%;
+  height: auto;
   transition: 0.5s ease;
 }
 
@@ -379,7 +417,7 @@ span {
   }
 
   section {
-    padding: 10rem 3% 2rem;
+    padding: 14rem 3% 2rem;
   }
 
   .services,
