@@ -3,9 +3,26 @@
  */
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
+let tst = document.querySelector(".btn");
+
+tst.onclick = () => {
+  Swal.fire({
+    title: "Message Sent!",
+    text: "Thanks for your message! I'll get back to you soon.",
+    icon: "success",
+    timer: 3000,
+    timerProgressBar: true,
+    showConfirmButton: false,
+  });
+};
 
 menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
+  if (menuIcon.getAttribute("name") === "menu-outline") {
+    menuIcon.setAttribute("name", "close-outline");
+  } else {
+    menuIcon.setAttribute("name", "menu-outline");
+  }
+
   navbar.classList.toggle("active");
 };
 

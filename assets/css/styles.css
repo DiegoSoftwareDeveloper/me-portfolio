@@ -94,6 +94,11 @@ section {
   font-size: 3.6rem;
   color: var(--text-color);
   display: none;
+  cursor: pointer;
+}
+
+.swal2-popup {
+  font-size: 1.6rem !important;
 }
 
 .home {
@@ -195,6 +200,7 @@ span {
 .heading {
   text-align: center;
   font-size: 4.5rem;
+  margin-bottom: 5px;
 }
 
 .about-content h2 {
@@ -209,6 +215,7 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+  line-height: 1.5;
 }
 
 .services h2 {
@@ -238,7 +245,7 @@ span {
   transform: scale(1.02);
 }
 
-.services-box i {
+.services-box ion-icon {
   font-size: 7rem;
   color: var(--main-color);
 }
@@ -249,7 +256,7 @@ span {
 
 .services-box p {
   font-size: 1.6rem;
-  margin: 1rem 0 3rem;
+  margin: 1rem;
 }
 
 .portfolio {
