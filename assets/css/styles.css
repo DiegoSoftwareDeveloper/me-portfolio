@@ -308,6 +308,7 @@ span {
   padding: 0 4rem;
   transform: translateY(100%);
   transition: 0.5s ease;
+  line-height: 1.5;
 }
 
 .portfolio-box:hover .portfolio-layer {
