@@ -36,11 +36,17 @@ const reflectPreference = () => {
     document.documentElement.style.setProperty('--text-color', '#1f242d');
     document.documentElement.style.setProperty('--second-bg-color', '#D1D1D1');
     document.documentElement.style.setProperty('--color-icon', '#323946');
+
+    const logoImg = document.querySelector('.logo img');
+    if (logoImg) logoImg.src = 'assets/img/logo-Photoroom2.webp';
   }else{
     document.documentElement.style.setProperty('--bg-color', '#1f242d');
     document.documentElement.style.setProperty('--text-color', '#FFFFFF');
     document.documentElement.style.setProperty('--second-bg-color', '#323946');
     document.documentElement.style.setProperty('--color-icon', 'hsl(220, 9%, 94%)');
+
+    const logoImg = document.querySelector('.logo img');
+    if (logoImg) logoImg.src = 'assets/img/logo-Photoroom.webp';
   }
 }
 
